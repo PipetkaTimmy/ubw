@@ -18,10 +18,404 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgba(245, 245, 245, 1);
+  min-height: 100vh;
+  display: flex;
+}
+
+.mainContainer {
+  width: 100%;
+}
+
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.loginWraper {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.wraperLoginInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authButton {
+  width: 100%;
+  margin-top: 10px;
+  padding: 28px;
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 280px;
+  width: 100%;
+}
+
+.logo {
+  border-right: 1px solid rgba(218, 218, 218, 1);
+  width: 100%;
+  height: 100px;
+}
+
+.linksWraper {
+  display: flex;
+  flex-direction: column;
+}
+
+.linksWraper a {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(218, 218, 218, 1);
+  border-right: 1px solid rgba(218, 218, 218, 1);
+}
+
+.linksWraper a:first-child {
+  border-top: 1px solid rgba(218, 218, 218, 1);
+}
+
+.linkItem {
+  display: flex;
+  gap: 8px;
+
+}
+
+.bottomSideItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid rgba(218, 218, 218, 1);
+  padding: 16px 24px;
+}
+
+.bottomSideItem:first-child {
+  border-top: 1px solid rgba(218, 218, 218, 1);
+}
+
+.exitBtn {
+  width: 100%;
+  border-radius: 0px;
+  padding: 24px;
+  justify-content: flex-start;
+  background-color: transparent;
+  height: 75px;
+}
+
+.navbar {
+  padding: 32px 32px;
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+
+}
+
+.verificationContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.verificationBlock {
+  border: 1px dashed #00000099;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.verificationBlock span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.mainBlock {
+  background-color: #fff;
+  margin: 12px;
+  padding: 24px;
+  height: calc(100vh - 126px);
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 42px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputLabelHolder {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputLabelHolder span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bgGray {
+  background-color: #F5F5F5;
+}
+
+.pc-12 {
+  padding: 12px;
+}
+
+.bgWhite {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radioButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.tabBtn {
+  background-color: #fff;
+  border-radius: 0;
+  border: 1px solid #F5F5F5;
+}
+
+.titleDoc {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.docWraper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.docBlock {
+  background-color: #F5F5F5;
+  display: flex;
+  gap: 16px;
+  padding: 12px;
+}
+
+.inputFileWraper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 12px;
+  background-color: #F5F5F5;
+  color: #151515;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.file-name {
+  margin-top: 10px;
+  display: block;
+}
+
+.verifBtn {
+  background-color: #353889;
+  border-radius: 0;
+  color: #fff;
+  width: 100%;
+  margin-top: 32px;
+  height: 56px;
+}
+
+.voteContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.voteCard {
+  border: 1px solid #DADADA;
+  padding: 24px;
+  width: 100%;
+  max-width: 374px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #fff;
+  height: max-content;
+  align-items: self-start;
+  border-radius: 0;
+}
+
+.voteTopic {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  white-space: break-spaces;
+  text-align: start;
+  line-height: normal;
+
+}
+
+.voteTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  white-space: break-spaces;
+  text-align: start;
+  line-height: normal;
+}
+
+.voteCount {
+  color: #00000099;
+  font-size: 16px;
+  white-space: break-spaces;
+  text-align: start;
+  line-height: normal;
+}
+
+.voteIndicator {
+  background-color: #EFCD18;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.opacity {
+  opacity: 0.6;
+}
+
+.voteContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.voteModalQuestionNumber {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.voteModalTitle {
+  font-size: 42px;
+  font-weight: 600;
+  max-width: 740px;
+  width: 100%;
+  text-align: center;
+  line-height: normal;
+}
+
+.voteVariants {
+  display: flex;
+  gap: 24px;
+}
+
+.voteBtn {
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #151515;
+  width: 250px;
+  height: 200px;
+  padding: 44px 33px;
+  border: 1px solid #DADADA;
+  border-radius: 0;
+  gap: 24px;
+}
+
+.voteBtn span {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.progresWraper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+.voteAdminContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.voteAdminBlock {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F5F5;
+  padding: 12px 14px;
+}
+
+.voteAdminBlock img {
+  width: 24px;
+  height: 24px;
+}
+
+.addVote {
+  background-color: #fff;
+  border: 1px solid #DADADA;
+  padding: 10px;
+  font-size: 30px;
+  line-height: 20px;
+  margin-top: 40px;
+}
+
+.historyBtn {
+  display: flex;
+  gap: 5px;
+  width: 200px;
+  align-items: start;
+}
+
+.historyBtn img {
+  width: 30px;
+  height: 30px;
+}
+
+.statusBlock{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
